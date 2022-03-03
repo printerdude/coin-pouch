@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Menu from './components/Menu';
 import CollectorDetails from './components/CollectorDetails';
 
+
 function App() {
   return (
     <div >
