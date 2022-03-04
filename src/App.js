@@ -13,13 +13,15 @@ function App() {
     normalGas: '',
     fastGas: '',
   });
-
+  const [ethBalance, setEthBalance] = useState();
   return (
 		<div>
 			<Header></Header>
 			<GasOracle gas={gas} setGas={setGas}></GasOracle>
 			<Menu></Menu>
-			<CollectorDetails></CollectorDetails>
+			<CollectorDetails
+				ethBalance={ethBalance}
+				setEthBalance={setEthBalance}></CollectorDetails>
 		</div>
 	);
 }

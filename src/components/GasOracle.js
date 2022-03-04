@@ -11,13 +11,14 @@ function GasOracle({ gas, setGas }) {
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res.result.SafeGasPrice)
-				let newSlowGas = res.result.SafeGasPrice;
-				let newFastGas = res.result.FastGasPrice;
-                let proposeGasPrice = res.result.ProposeGasPrice;
+				let SafeGasPrice = res.result.SafeGasPrice;
+				let ProposeGasPrice = res.result.ProposeGasPrice;
+				let FastGasPrice = res.result.FastGasPrice;
+
 				const newGas = {
-					slowGas: newSlowGas,
-					fastGas: newFastGas,
-					normalGas: proposeGasPrice,
+					slowGas: SafeGasPrice,
+					normalGas: ProposeGasPrice,
+					fastGas: FastGasPrice,
 				};
 				// const newGas = {
 				// 	...gas,
@@ -30,14 +31,14 @@ function GasOracle({ gas, setGas }) {
 				console.error(err);
 			});
 	}, []);
-
+    
 	return (
 		<div>
 			<h2>Gas Oracle</h2>
 			<ul>
 				<li>Slow: {gas.slowGas} Gwei</li>
-				<li>Normal: </li>
-				<li>Fast: </li>
+				<li>Normal: {gas.normalGas} Gwei</li>
+				<li>Fast: {gas.fastGas} Gwei</li>
 			</ul>
 		</div>
 	);
