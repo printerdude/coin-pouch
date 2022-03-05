@@ -14,14 +14,15 @@ function App() {
     fastGas: '',
   });
   const [ethBalance, setEthBalance] = useState();
+  const [searchMenu, setSearchMenu] = useState('');
   return (
 		<div>
-			<Header></Header>
-			<GasOracle gas={gas} setGas={setGas}></GasOracle>
-			<Menu></Menu>
+			<Header />
+			<GasOracle gas={gas} setGas={setGas} />
+			<Menu searchMenu={searchMenu} setSearchMenu={setSearchMenu} />
 			<CollectorDetails
 				ethBalance={ethBalance}
-				setEthBalance={setEthBalance}></CollectorDetails>
+				setEthBalance={setEthBalance} />
 		</div>
 	);
 }
