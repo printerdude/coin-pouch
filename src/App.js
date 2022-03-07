@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
+import Home from './components/Home';
 import Menu from './components/Menu';
 import CollectorDetails from './components/CollectorDetails';
 import GasOracle from './components/GasOracle';
@@ -40,14 +40,28 @@ function App() {
 	}
 	return (
 		<div id='app'>
-			<Header />
+			<nav>
+				<Link to='/'>
+					<img
+						src='https://2163491710-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-McrExXKKJBLJqymbFhO%2Fuploads%2Fgit-blob-e872ec46815c6b27a656435e59e6a3c45435c080%2F1200px-Ethereum-icon-purple.svg.png?alt=media'
+						alt='etherium'
+					/>
+					<h1>Coin Pouch</h1>
+				</Link>
+			</nav>
+			<main>
+				<Routes>
+					<Route path='/' element={<Home />} />
+				</Routes>
+			</main>
+			{/* <Header />
 			<GasOracle gas={gas} setGas={setGas} />
 			<Menu
 				searchMenu={searchMenu}
 				setSearchMenu={setSearchMenu}
 				handleSearch={handleSearch}
 			/>
-			<CollectorDetails ethBalance={ethBalance} />
+			<CollectorDetails ethBalance={ethBalance} /> */}
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header(props) {
+function Home(props) {
     return (
         <div>
             <h1>Coin Pouch</h1>
@@ -8,4 +8,4 @@ function Header(props) {
     );
 }
 
-export default Header;
+export default Home;
