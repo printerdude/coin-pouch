@@ -5,8 +5,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Menu from './components/Menu';
 import CollectorDetails from './components/CollectorDetails';
 import Home from './components/Home';
-// import Menu from './components/Menu';
-// import CollectorDetails from './components/CollectorDetails';
 import GasOracle from './components/GasOracle';
 
 function App() {
@@ -69,30 +67,8 @@ function App() {
 						path='/gasoracle'
 						element={<GasOracle gas={gas} setGas={setGas} />}
 					/>
-					{/* <Route
-						path='/'
-						element={
-							<Menu
-								searchMenu={searchMenu}
-								setSearchMenu={setSearchMenu}
-								handleSearch={handleSearch}
-							/>
-						}
-					/>
-					<Route
-						path='/'
-						element={<CollectorDetails ethBalance={ethBalance} />}
-					/> */}
 				</Routes>
 			</main>
-			{/* <Header />
-			<GasOracle gas={gas} setGas={setGas} />
-			<Menu
-				searchMenu={searchMenu}
-				setSearchMenu={setSearchMenu}
-				handleSearch={handleSearch}
-			/>
-			<CollectorDetails ethBalance={ethBalance} /> */}
 		</div>
 	);
 }
