@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import CollectorDetails from './components/CollectorDetails';
@@ -46,7 +47,7 @@ function App() {
 				setSearchMenu={setSearchMenu}
 				handleSearch={handleSearch}
 			/>
-			<CollectorDetails ethBalance={ethBalance} setEthBalance={setEthBalance} />
+			<CollectorDetails ethBalance={ethBalance} />
 		</div>
 	);
 }

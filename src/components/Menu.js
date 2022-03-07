@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-// import { useEffect } from 'react';
 
 function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 	const collectors = [
@@ -26,30 +25,15 @@ function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 		},
 	];
 	const handleChange = (event) => {
-        // need to set the state of searchMenu to the name of the selected collector
-        console.log(searchMenu);
-        setSearchMenu({
-					...searchMenu,
-                    name: event.target.value,
-                    wallet: collectors.find(element => element.name === event.target.value).wallet
-				})
-        
-}
-// useEffect(() => {
-// 	const url = `${collectors}`;
+		console.log(searchMenu);
+		setSearchMenu({
+			...searchMenu,
+			name: event.target.value,
+			wallet: collectors.find((element) => element.name === event.target.value)
+				.wallet,
+		});
+	};
 
-// 	fetch(url)
-// 		.then((res) => res.json())
-// 		.then((res) => {
-// 			// console.log(res.result)
-// 			let name = res.name;
-// 			const newName = name;
-// 			setSearchMenu(newName);
-// 		})
-// 		.catch((err) => {
-// 			console.error(err);
-// 		});
-// }, []);
 	return (
 		<div>
 			<form onSubmit={handleSearch}>
@@ -64,11 +48,6 @@ function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 							{collector.name}
 						</option>
 					))}
-					{/* {searchMenu.map((collector) => (
-					<option key={collector.name} value={collector.name}>
-						{collector.name}
-					</option>
-				))} */}
 				</select>
 				<button type='submit'>Submit</button>
 			</form>
