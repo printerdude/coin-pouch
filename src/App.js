@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
 import Menu from './components/Menu';
 import CollectorDetails from './components/CollectorDetails';
+import Home from './components/Home';
+// import Menu from './components/Menu';
+// import CollectorDetails from './components/CollectorDetails';
 import GasOracle from './components/GasOracle';
 
 function App() {
@@ -14,12 +16,10 @@ function App() {
 		fastGas: '',
 	});
 	const [ethBalance, setEthBalance] = useState();
-	const [searchMenu, setSearchMenu] = useState(
-		{
-			name: '',
-			wallet: '',
-		}
-	);
+	const [searchMenu, setSearchMenu] = useState({
+		name: '',
+		wallet: '',
+	});
 
 	function handleSearch(event) {
 		event.preventDefault();
@@ -48,10 +48,41 @@ function App() {
 					/>
 					<h1>Coin Pouch</h1>
 				</Link>
+				<Link to='/gasoracle'>
+					<p>Gas Oracle</p>
+				</Link>
 			</nav>
 			<main>
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route
+						path='/'
+						element={
+							<Home
+								searchMenu={searchMenu}
+								setSearchMenu={setSearchMenu}
+								handleSearch={handleSearch}
+								ethBalance={ethBalance}
+							/>
+						}
+					/>
+					<Route
+						path='/gasoracle'
+						element={<GasOracle gas={gas} setGas={setGas} />}
+					/>
+					{/* <Route
+						path='/'
+						element={
+							<Menu
+								searchMenu={searchMenu}
+								setSearchMenu={setSearchMenu}
+								handleSearch={handleSearch}
+							/>
+						}
+					/>
+					<Route
+						path='/'
+						element={<CollectorDetails ethBalance={ethBalance} />}
+					/> */}
 				</Routes>
 			</main>
 			{/* <Header />

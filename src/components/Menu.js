@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
+
 function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 	const collectors = [
 		{
