@@ -31,7 +31,7 @@ function GasOracle({ gas, setGas }) {
 				console.error(err);
 			});
 	}, []);
-    
+
 	return (
 		<div>
 			<h2>Gas Oracle</h2>
