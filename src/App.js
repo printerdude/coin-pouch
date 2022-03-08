@@ -42,7 +42,7 @@ function App() {
 						src='https://2163491710-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-McrExXKKJBLJqymbFhO%2Fuploads%2Fgit-blob-e872ec46815c6b27a656435e59e6a3c45435c080%2F1200px-Ethereum-icon-purple.svg.png?alt=media'
 						alt='etherium'
 					/>
-					<h1>Coin Pouch</h1>
+					<h1 id='coinPouchLink'>Coin Pouch</h1>
 				</Link>
 				<Link to='/gasOracle'>
 					<p id='gasOracle'>Gas Oracle</p>
