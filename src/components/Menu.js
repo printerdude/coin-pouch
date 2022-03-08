@@ -37,7 +37,7 @@ function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 
 	return (
 		<div>
-			<form onSubmit={handleSearch}>
+			<form id='formContainer' onSubmit={handleSearch}>
 				<label htmlFor='menuEl'>Search Menu</label>
 				<select
 					id='menuEl'
