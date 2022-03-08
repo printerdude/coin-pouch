@@ -2,8 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Menu from './components/Menu';
-import CollectorDetails from './components/CollectorDetails';
 import Home from './components/Home';
 import GasOracle from './components/GasOracle';
 
@@ -37,17 +35,17 @@ function App() {
 			});
 	}
 	return (
-		<div id='app'>
-			<nav>
-				<Link to='/'>
+		<div id='container'>
+			<nav id='navBar'>
+				<Link id='homeLink' to='/'>
 					<img
 						src='https://2163491710-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-McrExXKKJBLJqymbFhO%2Fuploads%2Fgit-blob-e872ec46815c6b27a656435e59e6a3c45435c080%2F1200px-Ethereum-icon-purple.svg.png?alt=media'
 						alt='etherium'
 					/>
 					<h1>Coin Pouch</h1>
 				</Link>
-				<Link to='/gasoracle'>
-					<p>Gas Oracle</p>
+				<Link to='/gasOracle'>
+					<p id='gasOracle'>Gas Oracle</p>
 				</Link>
 			</nav>
 			<main>
@@ -64,7 +62,7 @@ function App() {
 						}
 					/>
 					<Route
-						path='/gasoracle'
+						path='/gasOracle'
 						element={<GasOracle gas={gas} setGas={setGas} />}
 					/>
 				</Routes>

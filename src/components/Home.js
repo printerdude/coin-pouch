@@ -7,11 +7,11 @@ function Home({ searchMenu, setSearchMenu, handleSearch, ethBalance }) {
 		<div>
 			<h1>This is the home page</h1>
 			<Menu
-					searchMenu={searchMenu}
-					setSearchMenu={setSearchMenu}
-					handleSearch={handleSearch}
-				/>
-				<CollectorDetails ethBalance={ethBalance} />
+				searchMenu={searchMenu}
+				setSearchMenu={setSearchMenu}
+				handleSearch={handleSearch}
+			/>
+			<CollectorDetails ethBalance={ethBalance} />
 		</div>
 	);
 }
