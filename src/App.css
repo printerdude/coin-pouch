@@ -14,25 +14,34 @@ img {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+    
 }
 
 #gasOracle {
     font-size: 1.2rem;
+    color: rgb(0, 150, 199);
 }
 
 #homeLink {
 	display: flex;
 	align-items: center;
 	font-size: 1.5rem;
+    color: rgb(0, 150, 199);
 }
 
 main {
 	text-align: center;
 	grid-row: 4;
 	grid-column: 1 / span 3;
+    color: rgb(0, 180, 216)
 }
 
 #formContainer {
     margin-top: 3rem;
     margin-bottom: 3rem;
+    color: rgb(0, 180, 216)
+}
+
+button {
+    background-color: rgb(72, 202, 228);
 }
