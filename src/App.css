@@ -45,3 +45,11 @@ main {
 button {
     background-color: rgb(72, 202, 228);
 }
+
+.gasStyle {
+	font-size: 1.5rem;
+}
+
+.gasOracleTitle {
+	font-size: 2rem;
+}

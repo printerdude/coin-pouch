@@ -26,7 +26,6 @@ function Menu({ searchMenu, setSearchMenu, handleSearch }) {
 		},
 	];
 	const handleChange = (event) => {
-		console.log(searchMenu);
 		setSearchMenu({
 			...searchMenu,
 			name: event.target.value,

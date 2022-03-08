@@ -24,7 +24,6 @@ function App() {
 		fetch(ethBalanceURL)
 			.then((res) => res.json())
 			.then((res) => {
-				// console.log(res.result)
 				let result = res.result;
 				const weiEthBalance = result;
 				const newEthBalance = weiEthBalance / 1000000000000000000;
