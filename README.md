@@ -2,7 +2,7 @@
 
 ## Description
 
-Discover the Ether Balances for the NFT collectors with the biggest followings on twitter! Compare and contrast collectors to one another to see who has the biggest pouch of Ether.
+Discover the Ether Balances of NFT collectors with the biggest followings on Twitter! Compare and contrast collectors to one another to see who has the biggest pouch of Ether.
 
 ## App Link
 https://coinpouch.netlify.app
